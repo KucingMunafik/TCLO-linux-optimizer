@@ -51,6 +51,7 @@ if [[$((ker)) == 4]];
 echo "installing kernel zen..."
 sleep 1
 sudo pacman -S linux-zen
+fi
 
 elif [[$((input)) == 2]]; then
 
@@ -99,6 +100,7 @@ if [[$((dksnv)) == gnome]]; then
 
 ignm=$()
 $ignm
+fi
 
 elif [[$((input)) == 6]]; then
 
@@ -128,6 +130,7 @@ $(sync; echo 2 > /proc/sys/vm/drop_caches)
 
 if [[$((cachechoose)) == 3]]; then
 $(sync; echo 3 > /proc/sys/vm/drop_caches)
+fi
 
 elif [[$((input)) == 8]]; then
 
