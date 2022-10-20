@@ -52,13 +52,13 @@ echo "installing kernel zen..."
 sleep 1
 sudo pacman -S linux-zen
 
-elif [[ $((input)) == 2]]; then
+elif [[$((input)) == 2]]; then
 
 s=$(stacer) 
 
 s 
 
-elif [[ $((input)) == 3]]; then
+elif [[$((input)) == 3]]; then
 
 echo: "set the time when the computer will update(0 1-24): " 
 read tmup
@@ -132,7 +132,8 @@ $(sync; echo 3 > /proc/sys/vm/drop_caches)
 elif [[$((input)) == 8]]; then
 
 elif [[$((input)) == 9]]; then
+fi
 
 exit 
 done
-fi 
+ 
