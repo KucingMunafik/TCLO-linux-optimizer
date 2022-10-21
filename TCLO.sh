@@ -22,7 +22,7 @@ echo "
 
 read input
 
-if [[ $((input)) == 1 ]]; then
+if [[ $((input)) == "1" ]]; then
 
 echo "Choose the Linux Kernel you Want to install: 
 1) Stable 
@@ -78,7 +78,7 @@ add=$(sudo add-apt-repository ppa:$ppa)
 
 $add
 
-elif [[ $((input)) == 5 ]]; then
+elif [[ $((input)) == "5" ]]; then
 
 echo "type the dekstop environment do you want to install: "
 read dksnv
