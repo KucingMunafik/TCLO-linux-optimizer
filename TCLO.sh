@@ -22,7 +22,7 @@ echo "
 
 read input
 
-if [[$((input)) == 1]]; then
+if [[ $((input)) == 1 ]]; then
 
 echo "Choose the Linux Kernel you Want to install: 
 1) Stable 
@@ -32,44 +32,43 @@ echo "Choose the Linux Kernel you Want to install:
 
 read ker 
 
-if [[$((ker)) == 1]]; then 
+elif [[ $((ker)) == "1" ]]; then 
 echo "installing kernel stable..."
 sleep 1
 sudo pacman -S linux
 
-if [[$((ker)) == 2]];
+elif [[ $((ker)) == "2" ]];
 echo "installing kernel LTS..."
 sleep 1
 sudo pacman -S linux-lts
 
-if [[$((ker)) == 3]];
+elif [[ $((ker)) == "3" ]];
 echo "installing hardened kernel..."
 sleep 1
 sudo pacman -S linux-hardened
 
-if [[$((ker)) == 4]];
+elif [[ $((ker)) == "4" ]];
 echo "installing kernel zen..."
 sleep 1
 sudo pacman -S linux-zen
-fi
 
-elif [[$((input)) == 2]]; then
 
-s=$(stacer) 
+if [[ $((input)) == "2" ]]; then
 
-s 
+echo "$stacer" 
 
-elif [[$((input)) == 3]]; then
+
+if [[ $((input)) == "3" ]]; then
 
 echo: "set the time when the computer will update(0 1-24): " 
 read tmup
 
-update $(crontab -e 
-$tmup root (apt-get-update && apt-get -y -d upgrade) > dev/null)
+echo  "$crontab -e 
+$tmup root (apt-get-update && apt-get -y -d upgrade) > dev/null"
 
-$update
 
-elif [[$((input)) == 4]]; then
+
+if [[ $((input)) == "4" ]]; then
 
 echo "type the ppa link or website link: "
 
@@ -79,7 +78,7 @@ add=$(sudo add-apt-repository ppa:$ppa)
 
 $add
 
-elif [[$((input)) == 5]]; then
+elif [[ $((input)) == 5 ]]; then
 
 echo "type the dekstop environment do you want to install: "
 read dksnv
